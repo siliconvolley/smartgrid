@@ -1,8 +1,13 @@
+import { Link } from "react-router-dom";
+
 function HomeNav() {
     return (
         <header className="home-header">
             <div className="home-link">
-                <a href="/">Home</a>
+                <Link className="home-link" to="/dashboard">
+                    <img src="/src/assets/logo.png" alt="" width="40px" />
+                    <p> SmartGrid</p>
+                </Link>
             </div>
             <div className="menu-links">
                 <ul className="menu-items">

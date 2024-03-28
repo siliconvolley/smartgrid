@@ -20,10 +20,31 @@
     border-bottom: 2px solid #383838;
 }
 
+.home-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .menu-items {
     display: flex;
     gap: 3em;
     list-style: none;
+}
+
+.menu-items > li {
+    display: flex;
+    align-items: center;
+}
+
+.menu-items > li > img {
+    opacity: 0.5;
+    margin-right: 0.4em;
+}
+
+.menu-items > li:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .header-buttons {
@@ -168,4 +189,28 @@ footer {
     top: 13px;
     right: 5px;
     padding-inline: 0.2em;
+}
+
+/* ==================== -- DASHBOARD PAGE STYLING -- ====================*/
+
+.dashboard-header {
+    min-height: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding-inline: 2em;
+    margin-inline: 6rem;
+    border-radius: 0 0 0.75rem 0.75rem;
+    border-bottom: 2px solid #383838;
+}
+
+.dashboard-links {
+    align-self: center;
+    justify-self: baseline;
+}
+
+.dashboard-header-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+    justify-self: end;
 }
