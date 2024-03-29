@@ -4,8 +4,6 @@ import LoginPage from './pages/Login/Loginpage';
 import SignupPage from './pages/Signup/SignupPage';
 import Dashboard from './pages/Dashboard/Dashboard';
 
-import "./styles/App.css";
-
 function App() {
     return (
         <Router>
