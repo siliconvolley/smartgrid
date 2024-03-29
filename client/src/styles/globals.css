@@ -1,0 +1,316 @@
+:root {
+  /* Colours */
+  --clr-light-100: #f5f5f5;
+  --clr-light-300: #eaeaea;
+
+  --clr-dark-700: #282828;
+  --clr-dark-900: #161616;
+
+  --clr-neutral-100: #D8F3DC;
+  --clr-neutral-300: #B7E4C7;
+
+  --clr-primary-400: #74C69D;
+  --clr-primary-600: #52B788;
+
+  --clr-accent-500: #40916C;
+  --clr-accent-700: #1B4332;
+  --clr-accent-900: #081C15;
+
+  --fc-dark-700: var(--clr-dark-700);
+  --fc-dark-900: var(--clr-dark-900);
+
+  /* Font Families */
+  --ff-primary: "Inter", system-ui, Arial, sans-serif;
+  --ff-accent: "Gabarito", system-ui, Arial, sans-serif;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  /* Font Sizes */
+  --fs-body: 0.875rem;
+  --fs-primary-heading: 3.5rem;
+  --fs-secondary-heading: 2.5rem;
+  --fs-nav: 0.975rem;
+  --fs-button: 0.8rem;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: var(--fw-regular);
+}
+
+* {
+  font-family: var(--ff-primary);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-light-300);
+  text-decoration: none;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-dark-900);
+  color: var(--clr-light-300);
+}
+
+h1 {
+  font-size: var(--fs-primary-heading);
+  line-height: 1.1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+}
+
+button {
+  display: grid;
+  place-items: center;
+  color: var(--clr-light-300);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-semi-bold);
+  padding: 0.8em 1.2em;
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  background: var(--clr-dark-900);
+}
+
+button:hover {
+  border-color: var(--clr-dark-700);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ==================== -- HOME PAGE STYLING -- ====================*/
+
+.home-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding-inline: 2em;
+}
+
+.home-header, footer {
+  margin-inline: 6rem;
+}
+
+.home-header {
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2em;
+  border-radius: 0 0 0.75rem 0.75rem;
+  border-bottom: 2px solid #383838;
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-items {
+  display: flex;
+  gap: 3em;
+  list-style: none;
+}
+
+.menu-items > li {
+  display: flex;
+  align-items: center;
+}
+
+.menu-items > li > img {
+  opacity: 0.5;
+  margin-right: 0.4em;
+}
+
+.menu-items > li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.cards {
+  min-height: 30vh;
+  display: grid;
+  place-items: center;
+  border-radius: 3rem;
+  margin: 3em auto;
+  padding: 2em;
+}
+
+.card-1 {
+  background: palevioletred;
+}
+
+.card-2 {
+  background: palegreen;
+}
+
+.card-3 {
+  background: palegoldenrod;
+}
+
+footer {
+  min-height: 5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.75rem 0.75rem 0 0;
+  border-top: 2px solid #383838;
+}
+
+/* ==================== -- AUTHENTICATION PAGE (LOGIN & SIGNUP) STYLING -- ====================*/
+
+/* ==================== -- LOGIN PAGE STYLING -- ====================*/
+
+.login-container {
+  max-height: 80vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 60% 40%;
+  border: 1px solid #333;
+  border-radius: 2rem;
+  box-shadow: 8px 5px 15px rgb(58, 58, 58);
+  margin: 3rem 10rem;
+  padding: 3rem 2em;
+}
+
+.login-image-container {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.forms-wrapper > div {
+  margin-bottom: 2rem;
+}
+
+.forms-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border-left: 1px solid #333;
+  padding-left: 5rem;
+}
+
+.project-logo img {
+  width: 35px;
+  height: 35px;
+  margin-right: 0.5em;
+}
+
+.project-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: var(--fw-semibold);
+}
+
+.login-form {
+  display: grid;
+  row-gap: 0.8em;
+  font-weight: var(--fw-semibold);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 0.6em;
+}
+
+.login-form input {
+  height: 3rem;
+  width: 100%;
+  font-size: var(--fs-body);
+  color: rgb(147, 147, 147);
+  background-color: #262626;
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding-inline: 1em;
+}
+
+.login-form input:focus {
+  outline: none;
+}
+
+.signup-link-text {
+  text-align: end;
+  font-size: 0.8rem;
+
+  & a:hover {
+      text-decoration: underline;
+  }
+}
+
+.forms-submit-button {
+  display: grid;
+  place-items: center;
+}
+
+.forms-submit-button > button {
+  border: 2px solid #333;
+  background: var(--clr-accent-700);
+  font-weight: var(--fw-semibold);
+}
+
+/* ==================== -- SIGNUP PAGE STYLING -- ====================*/
+
+.signup-password-input {
+  position: relative;
+}
+
+.signup-password-input > input {
+  padding-right: 3em;
+}
+
+.signup-password-toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 13px;
+  right: 5px;
+  padding-inline: 0.2em;
+}
+
+/* ==================== -- DASHBOARD PAGE STYLING -- ====================*/
+
+.dashboard-header {
+  min-height: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  padding-inline: 2em;
+  margin-inline: 6rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  border-bottom: 2px solid #383838;
+}
+
+.dashboard-links {
+  align-self: center;
+  justify-self: baseline;
+}
+
+.dashboard-header-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: center;
+  justify-self: end;
+}
+
