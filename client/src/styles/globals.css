@@ -109,6 +109,8 @@ button:focus-visible {
   margin-inline: 6rem;
 }
 
+/* Navbar */
+
 .home-header {
   min-height: 5rem;
   display: flex;
@@ -134,6 +136,7 @@ button:focus-visible {
 .menu-items > li {
   display: flex;
   align-items: center;
+  font-size: var(--fs-body);
 }
 
 .menu-items > li > img {
